@@ -1,0 +1,713 @@
+/*** CSS file: styles.css ***/
+
+/*** Custom Colors ***
+  Purpose:
+  - Use CSS variables to define custom colors for your website
+  - To get you started, we've provided the color scheme used in our example site.
+  - To reference a color variable in your css, use var(--variable-name) in place of a color value
+***/
+:root {
+    /* Main Colors */
+    --bg-color: #A2DDD8;
+    --text-color: #234B3A;
+
+    /* Tropical Accent Colors */
+    --accent-color-light: #FFF8E7;
+    --accent-color-medium: #E9DDC4;
+    --accent-color-dark: #007749;
+    --accent-color-darkest: #234B3A;
+    --accent-color-green: #007749;
+    --accent-color-yellow: #FED100;
+    --button-shadow: #163326;
+
+    /* Dark Mode - For Later Units */
+    --bg-color-dark-mode: #234B3A;
+    --text-color-dark-mode: #FFF8E7;
+
+    /* Error Colors - Leave for Later */
+    --error-color: #f8bbd0;
+    --error-color-border: #e63946;
+}
+
+/*** VSCodeEDU preview fix 
+  Purpose:
+  - Fix VSCodeEDU issue that causes a white border to show around
+    the preview window
+***/
+html {
+    background-color: var(--bg-color);
+}
+
+/*** body ***
+  Purpose:
+  - Add style rules for the body of your webpage
+  - This is useful if you want a rule to apply to EVERYTHING on your page
+  - (Tip: You can always override these rules later in the stylesheet)
+***/
+
+body {
+    background-color: var(--bg-color);
+    font-size: 18px;
+    color: var(--text-color);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin: 0px;
+    padding-bottom: 70px;
+}
+
+/*** Text ***
+  Purpose: 
+  - Add style rules for headings (h1-6),
+    paragraphs (p), links (a), and buttons 
+***/
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--accent-color-dark);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--accent-color-dark);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/*** Links ***
+  Purpose: 
+  - Add style rules for Links 
+***/
+a,
+a:visited {
+    color: var(--accent-color-dark);
+    font-weight: bold;
+}
+
+a:hover,
+a:hover * {
+    color: var(--accent-color-darkest);
+}
+
+/*** Buttons ***
+  Purpose: 
+  - Add style rules for buttons 
+***/
+button {
+    background-color: var(--accent-color-green);
+    color: var(--accent-color-light);
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: var(--accent-color-yellow);
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 0 var(--button-shadow);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.button-container a:first-child button {
+    border: 2px solid var(--accent-color-darkest);
+}
+
+.button-container a:last-child button {
+    border: 2px solid var(--accent-color-yellow);
+}
+
+/*** Navigation bar (navbar) ***
+  Purpose:
+  - Add style rules for your website's navbar
+***/
+.navbar {
+    background-color: var(--accent-color-darkest);
+    padding: 20px 40px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0px;
+}
+
+.navbar ul li + li::before {
+    content: "|";
+    color: var(--accent-color-medium);
+    margin: 0 12px;
+}
+
+.navbar ul li a {
+    color: var(--accent-color-medium);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    box-shadow: 0 0 0 2px var(--button-shadow);
+}
+
+/*** Header ***
+  Purpose:
+  - Add style rules for your website's header section
+***/
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    font-size: 90%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.header-container button {
+    height: 48px;
+    box-sizing: border-box;
+}
+
+#header-img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*** About, What to Expect, Itinerary and Links Section ***
+  Purpose:
+  - Add style rules for your website's About section
+  Purpose:
+  - Add style rules for your website's Expect section
+  Purpose:
+  - Add style rules for your website's Itinerary section
+  Purpose:
+  - Add style rules for your website's Links section
+***/
+
+.about,
+.expect,
+.itinerary,
+.links {
+    background-color: var(--accent-color-medium);
+    padding: 25px;
+    margin: 50px auto;
+    border-radius: 12px;
+    text-align: center;
+    width: 85%;
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+/*** Image(s) inside of each section ***/
+.about img,
+.expect img,
+.itinerary img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(35, 75, 58, 0.25);
+    border: 4px solid var(--accent-color-light);
+    box-sizing: border-box;
+}
+
+/*** Content inside of each section ***/
+.about-content,
+.list,
+.itinerary-content,
+.link-content {
+    background-color: var(--accent-color-light);
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 650px;
+    text-align: left;
+}
+
+/*** Specific text alignment in what to expect section ***/
+.list p {
+    text-align: left;
+}
+
+.list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+
+/*** Specific text alignment in itenaray/excursion section ***/
+.excursion-list {
+    padding: 15px 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.excursion-list p {
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: left;
+    margin: 5px 0 15px;
+}
+
+.excursion-list ul {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.excursion-list li {
+    margin-bottom: 5px;
+}
+
+.excursion-list a {
+    text-decoration: none;
+}
+
+.excursion-list a:hover {
+    text-decoration: underline;
+}
+
+/*** Specifically text align the link descriptions ***/
+.link-content p {
+    text-align: left;
+}
+
+/*** Link formatting for link section only ***/
+.link-content a {
+    text-decoration: none;
+}
+
+.link-content a:hover {
+    text-decoration: underline;
+}
+
+
+/*** RSVP Section ***/
+
+#rsvp {
+    background-color: var(--accent-color-medium);
+    padding: 25px;
+    margin: 50px auto;
+    border-radius: 12px;
+    text-align: center;
+    width: 85%;
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+
+.rsvp-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 25px;
+    align-items: stretch;
+}
+
+/* RSVP Description */
+.rsvp-para {
+    background-color: var(--accent-color-light);
+    padding: 25px;
+    border-radius: 10px;
+    width: 55%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* RSVP Participants */
+.rsvp-participants {
+    background-color: var(--accent-color-light);
+    padding: 25px;
+    border-radius: 10px;
+    width: 45%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.rsvp-para h3,
+.rsvp-participants h3 {
+    text-align: center;
+}
+
+.rsvp-participants p {
+    margin: 10px 0;
+}
+
+/* RSVP Form */
+.form-container {
+    background-color: var(--accent-color-light);
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+#rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+#rsvp-form label {
+    font-weight: bold;
+    color: var(--accent-color-darkest);
+}
+
+#rsvp-form input {
+    padding: 12px;
+    border: 2px solid var(--accent-color-medium);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+#rsvp-form input:focus {
+    outline: 2px solid var(--accent-color-green);
+}
+
+#rsvp-button {
+    margin-top: 20px;
+}
+
+
+/* RSVP Form Validation */
+#rsvp-form input.error {
+    border: 2px solid var(--error-color-border);
+    background-color: var(--error-color);
+}
+
+#rsvp-form input.error:focus {
+    outline: 2px solid var(--error-color-border);
+}
+
+
+/*** RSVP Dark Mode ***/
+.dark-mode #rsvp {
+    background-color: #163326;
+}
+
+.dark-mode .form-container {
+    background-color: #305C49;
+}
+
+.dark-mode #rsvp-form label {
+    color: var(--accent-color-light);
+}
+
+.dark-mode .rsvp-para,
+.dark-mode .rsvp-participants {
+    background-color: #305C49;
+}
+
+
+/*** Animations ***
+    Purpose:
+    - Add scroll animations to website sections
+***/
+
+.revealable {
+    --reveal-distance: 60px;
+
+    scroll-margin-top: var(--reveal-distance);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    position: relative;
+    transform: translateY(var(--reveal-distance));
+}
+
+.revealable.active {
+    scroll-margin-top: 0;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Reduce Motion Button */
+#motion-button {
+    background-color: transparent;
+    color: var(--accent-color-medium);
+    border: 2px solid var(--accent-color-yellow);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+#motion-button:hover {
+    background-color: var(--accent-color-yellow);
+    color: var(--accent-color-darkest);
+}
+
+/* Disable scroll animations */
+.reduce-motion .revealable {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+}
+
+
+/*** Success Modal ***
+    Purpose:
+    - Style the RSVP confirmation popup
+***/
+
+/* Darkened background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal content box */
+.modal-container {
+    background-color: var(--accent-color-light);
+    color: var(--accent-color-darkest);
+
+    padding: 40px;
+    width: 80%;
+    max-width: 450px;
+    box-sizing: border-box;
+
+    border-radius: 16px;
+    border: 4px solid var(--accent-color-yellow);
+
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal heading */
+.modal-container h2 {
+    color: var(--accent-color-dark);
+    margin-top: 0;
+}
+
+/* Modal content */
+.modal-item {
+    margin: 20px 0;
+}
+
+/* Modal image */
+#modal-image {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Disable modal animation when Reduce Motion is on */
+.reduce-motion #modal-image {
+    transition: none;
+    transform: none !important;
+}
+
+
+/* Modal text */
+#modal-text {
+    color: var(--accent-color-darkest);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Responsive modal */
+@media (max-width: 600px) {
+    .modal-container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .modal-container h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* Modal Close Button */
+#modal-close {
+    background-color: var(--accent-color-green);
+    color: var(--accent-color-light);
+    border: 2px solid var(--accent-color-yellow);
+    border-radius: 8px;
+    padding: 10px 25px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#modal-close:hover {
+    background-color: var(--accent-color-yellow);
+    color: var(--accent-color-darkest);
+}
+
+
+
+/* Dark Mode Toggle Button */
+#theme-button {
+    background-color: transparent;
+    color: var(--accent-color-medium);
+    border: 2px solid var(--accent-color-yellow);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+#theme-button:hover {
+    background-color: var(--accent-color-yellow);
+    color: var(--accent-color-darkest);
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px var(--button-shadow);
+}
+
+/* Dark Mode Theme */
+.dark-mode {
+    background-color: var(--bg-color-dark-mode);
+    color: var(--text-color-dark-mode);
+}
+
+/* Headings */
+.dark-mode h1,
+.dark-mode h3 {
+    color: var(--accent-color-yellow);
+}
+
+/* Main Sections */
+.dark-mode .about,
+.dark-mode .expect,
+.dark-mode .itinerary,
+.dark-mode .links {
+    background-color: #163326;
+}
+
+/* Content Boxes */
+.dark-mode .about-content,
+.dark-mode .list,
+.dark-mode .itinerary-content,
+.dark-mode .link-content {
+    background-color: #305C49;
+}
+
+/* Links */
+.dark-mode a,
+.dark-mode a:visited {
+    color: var(--accent-color-yellow);
+}
+
+.dark-mode a:hover {
+    color: var(--accent-color-medium);
+}
+
+/* Dark Mode Button */
+.dark-mode #theme-button {
+    background-color: var(--accent-color-yellow);
+    color: var(--accent-color-darkest);
+}
+
+.dark-mode #theme-button:hover {
+    background-color: var(--accent-color-medium);
+}
+
+
+/* Push navigation links to the right */
+.navbar ul li:nth-child(2) {
+    margin-right: auto;
+}
+
+/* Remove separator after Dark Mode and Reduce Motion buttons */
+.navbar ul li:nth-child(2)::before,
+.navbar ul li:nth-child(3)::before {
+    content: none;
+}
+
+
+/*** footer ***
+  Purpose:
+  - Add style rules for your website's footer section
+***/
+
+.footer {
+    background-color: var(--accent-color-darkest);
+    color: var(--accent-color-light);
+    padding: 10px 20px;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.footer a,
+.footer a:visited {
+    color: var(--accent-color-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: var(--accent-color-yellow);
+}

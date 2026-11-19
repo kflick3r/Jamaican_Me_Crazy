@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- head
+
+        Purpose:
+        - Title used here shows up in the browser tab
+        - Link to the favicon (small image that appears in the browser tab)
+        - Link to the CSS file (used to style the webpage)
+        -->
+        <title>Jamaican Me Crazy! | Family Vacation 2027</title>
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt0EBUGmv0jOk7WBSXkYQV0XWQKzwTUToHNJQ8GVv2Bw&s">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <!-- navbar
+        Purpose:
+        - Navigation bar that allows users to jump to different sections of the webpage
+        - Also holds buttons for user settings (dark mode, reduce motion)
+        -->
+        <div class="navbar" id="top">
+            <ul>
+                <li><button id="theme-button">Dark Mode</button></li>
+                <li><button id="motion-button">Reduce Motion: Off</button></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#expect">What to Expect</a></li>
+                <li><a href="#itinerary">Itinerary</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </div>
+
+        <!-- headings
+        Purpose:
+        - Main header section of the webpage
+        - Contains the title, subtitle, image, and key buttons for the webpage
+        -->
+        <div class="header-container">
+            <img
+                id="header-img"
+                src="./img/jamaicaFlag.png"
+                alt="Flag of Jamaica"
+            >
+            
+            <h1>Jamaican Me Crazy!</h1>
+            <div class="button-container">
+                <a href="#excursions">
+                    <button type="button">Explore Jamaica</button>
+                </a>
+                <a href="#rsvp">
+                    <button type="button">RSVP 🎉</button>
+                </a>
+            </div>
+        </div>
+
+        
+        <!-- about
+        Purpose:
+        - Section for general info about the event
+        - Contains a video, description, and key points about the event
+        --> 
+        <div class="about revealable" id="about">
+            <h2>About the Event</h2>
+            <div class="about-content">
+                <p>All the information you could want for our family vacation to Jamaica!</p>
+                <p>Let's escape the Colorado cold for some drinks in the sun, February 2027!</p>
+            
+                <img 
+                    alt="Beautiful Bungalow over the Crystal Clear Waters of Jamaica" 
+                    src="./img/Jamaica.jpg"
+                />
+            </div>
+        </div>
+            
+        <div class="expect revealable" id="expect">
+            <h2>What to Expect</h2>
+            <div class="list">
+                <p>Sunshine, sandy beaches, and plenty of drinks poolside!</p>
+                <img 
+                    alt="Swim Up Bar in Jamaica" 
+                    src="./img/lifestyle_restaurants_and_bars_azul_beach_negril_1.jpg"
+                />
+                        
+                <h3>Island Time!</h3>
+                <p>A little preview of our week in paradise:</p>
+                    <ul>
+                        <li><strong>Beach Days:</strong> Relax on the sand and enjoy the Caribbean sunshine.</li>
+                        <li><strong>Poolside Drinks:</strong> Swim-up bars, tropical cocktails, and absolutely no responsibilities.</li>
+                        <li><strong>Pool Volleyball:</strong> Full afternoons of fun. (And Dad won't lose his ring this time!)</li>
+                        <li><strong>Family Time:</strong> Good food, plenty of laughs, and making memories together.</li>
+                    </ul>
+            </div>
+        </div>
+
+        <!-- Itinerary
+        Purpose:
+        - Section for specific info about the event's schedule
+        - Contains images and descriptions of each activity
+        --> 
+        <div class="itinerary revealable" id="itinerary">
+            <h2>Our Very Relaxed Itinerary</h2>
+
+            <div class="itinerary-content">
+                <img 
+                    alt="Views of the pool and ocean" 
+                    src="./img/two_bedroom_ocean_front_suite_rooms_azul_beach_negril_1.jpg"
+                />
+                <h3>Poolside Paradise</h3>
+                <p>
+                    Our main agenda? Pool volleyball, swim-up bars,
+                    Caribbean sunshine, and absolutely no alarms.
+                    Grab a drink, claim a lounge chair, and enjoy island time!
+                </p>
+                
+                <img 
+                    alt="Dancing on the Beach" 
+                    src="./img/lifestyle_beach_azul_beach_negril_2.jpg"
+                />
+                <h3>Resort Fun</h3>
+                <p>
+                    When we're ready for a break from the pool, we can
+                    check out wine tasting, reggae tie-dye, aqua reggae,
+                    beach bocce, or a relaxing resort activity.
+                    <br>Participation is entirely optional!
+                </p>
+                
+                <img 
+                    alt="Rick's Cafe in Jamaica" 
+                    src="./img/Tours-Ricks-Cafe-501b949156a.jpg"
+                />
+                <h3 id="excursions">An Island Adventure or Two?</h3>
+                <p>
+                    We might venture beyond the resort for one excursion!
+                    A catamaran cruise, sunset at Rick's Café, or a
+                    waterfall adventure could be on the menu.
+                    We can decide together! 
+                    <br>Here are a few possibilities to explore:
+                </p>
+                <div class="excursion-list">
+                    <ul>
+                        <li>
+                            <a href="https://yamonredstripecatamaran.com/">
+                            Catamaran Cruise & Snorkeling
+                            </a>
+                            <p>
+                            Sail along the beautiful Jamaican coastline,
+                            enjoy some snorkeling, and maybe sip a tropical
+                            drink or two!
+                            </p>
+                        </li>
+
+                        <li>
+                            <a href="https://www.rickscafejamaica.com/">
+                            Rick's Cafe
+                            </a>
+                        <p>
+                        Watch the famous cliff divers, enjoy live music,
+                        and catch a gorgeous Caribbean sunset.
+                        </p>
+                        </li>
+
+                        <li>
+                            <a href="https://mayfieldfalls.com/mayfield-falls-jamaica/mayfield-falls.html">
+                            Mayfield Falls
+                            </a>
+                        <p>
+                        Explore lush tropical scenery, beautiful
+                        waterfalls, and natural swimming pools.
+                        </p>
+                        </li>
+
+                        <li>
+                            <a href="https://ysfalls.com/">
+                            YS Falls
+                            </a>
+                        <p>
+                        Discover stunning waterfalls surrounded by
+                        tropical gardens, with opportunities for
+                        swimming and outdoor adventures.
+                        </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <img 
+                    alt="One of the Resort Restaurants" 
+                    src="./img/mahogany_restaurant_and_kitchen_restaurants_and_bars_azul_beach_negril.jpg"
+                />
+                <h3>Food, Drinks & Family Time</h3>
+                <p>
+                    Delicious resort meals, tropical cocktails, and
+                    plenty of time together. No reservations on our
+                    calendars unless they're for dinner!
+                </p>
+            </div>
+        </div>
+
+        <!-- rsvp
+            Purpose:
+                - Section for users to sign up for the event
+                - Contains a form for users to input their information, 
+                    and a list of other users who have signed up
+        --> 
+        <div id="rsvp" class="revealable">
+            <h2>RSVP</h2>
+
+            <div class="rsvp-container">
+
+                <!-- RSVP Description -->
+                <div class="rsvp-para">
+                    <h3>Are You Coming to Jamaica?</h3>
+                    <p>
+                        Sunshine, sandy beaches, and family fun are calling!
+                        Let us know if you're joining us for our February
+                        2027 Jamaica getaway.
+                    </p>
+                    <p>
+                        Fill out the form below to add your name
+                        to our vacation crew!
+                    </p>
+                </div>
+
+                <!-- RSVP Participants -->
+                <div class="rsvp-participants">
+                    <h3>Who's Coming? 🌴</h3>
+                    <p id="rsvp-placeholder">Be the first to RSVP!</p>
+                </div>
+
+            </div>
+
+            <!-- RSVP Form -->
+            <div class="form-container">
+                <form id="rsvp-form" title="rsvp-form">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name"
+                        placeholder="Your Name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email"
+                        placeholder="Your Email">
+
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" min="1"
+                        placeholder="Including Yourself">
+
+                </form>
+
+                <button id="rsvp-button" type="button">
+                    Submit RSVP 🎉
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Success Modal
+            Purpose:
+            - Display a confirmation after a successful RSVP
+            - Show a personalized message and animated image
+        -->
+
+        <div id="success-modal" class="modal">
+            <div class="modal-container">
+
+                <h2>You're Going to Jamaica! 🌴</h2>
+
+                <div class="modal-item">
+                    <p id="modal-text">
+                        Thanks for RSVPing! We can't wait to see you in Jamaica!
+                    </p>
+                    <button id="modal-close" type="button">Close</button>
+                </div>
+
+                <div class="modal-item">
+                    <img
+                        id="modal-image"
+                        src="./img/jamaicaFlag.png"
+                        alt="Jamaican flag"
+                    >
+                </div>
+
+            </div>
+        </div>
+
+
+            <!-- Links
+                Purpose:
+                    - Links to other resources related to the event
+            -->
+            <div class="links revealable" id="links">
+                <h2>Links</h2>
+
+                <div class="link-content">
+                    <article>
+                        <h3>
+                            <a href="https://www.karismahotels.com/azul-beach-resorts/negril">
+                                Hotel Information
+                            </a>
+                        </h3>
+                        <p>Azul Beach Resort Negril Gourmet Inclusive by Karisma. All Inclusive Resort Negril Jamaica.</p>
+                    </article>
+
+                <article>
+                    <h3>
+                        <a href="https://www.karismahotels.com/azul-beach-resorts/negril/resort-map">
+                            Resort Map
+                        </a>
+                    </h3>
+                    <p>Discover your Jamaican oasis before you even arrive. Unwind on pristine beaches, soak up the sun by the infinity pool, or rejuvenate at Vassa Spa.</p>
+                </article>
+
+                <article>
+                    <h3>
+                        <a href="https://www.karismahotels.com/azul-beach-resorts/negril/experiences">
+                            Resort Activities & Experiences
+                        </a>
+                    </h3>
+                        <p>
+                            Explore everything the resort has to offer, from
+                            pool volleyball and aqua reggae to wine tasting,
+                            tie-dye, and other fun activities!
+                    </p>
+                </article>
+                </div>
+            </div>
+        
+        <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <span>Jamaica | 2027</span>
+            <a href="#top">Top ↑</a>
+        </footer>
+
+        <!-- Connect Javascript file -->
+        <script src="index.js"></script>
+    </body>
+</html>
